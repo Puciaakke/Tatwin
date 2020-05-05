@@ -21,18 +21,12 @@ public class test1 {
 	@FindBy(xpath = "//div[@class='error']")
 	WebElement resultText;
 	
-	@FindBy(xpath = "//div[@id='case_login']//a")
-	WebElement backButton;
 	
-	//@FindBy(xpath = "//a[@class='btn btn-outline-secondary']")
-	//WebElement logginButton;
-	
-	//constructor
 	public test1(WebDriver driver){
 		this.driver = driver;
 	    PageFactory.initElements(driver, this);
 	}
-	//methods
+	
 	public void enterUsername(String username){
 		usernameInput.sendKeys(username);
 	}
@@ -47,10 +41,6 @@ public class test1 {
 	
 	public String getResult(){
 		return resultText.getText();
-	}
-	
-	public void goBack(){
-		backButton.click();
 	}
 	
 }
